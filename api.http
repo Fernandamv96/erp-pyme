@@ -1,0 +1,44 @@
+### Pruebas rápidas de la API desde VS Code
+### Instala la extensión "REST Client" y haz clic en "Send Request" sobre cada bloque.
+
+@base = http://localhost:3000/api
+
+### Todos los datos
+GET {{base}}/datos
+
+### Indicadores ya calculados
+GET {{base}}/resumen
+
+### Listar un módulo (ventas, inventario, clientes, gastos)
+GET {{base}}/inventario
+
+### Crear una venta
+POST {{base}}/ventas
+Content-Type: application/json
+
+{
+  "fecha": "2026-10-18",
+  "cliente": "Ana Torres",
+  "producto": "Café molido 250g",
+  "cantidad": 2,
+  "precio": 6500,
+  "canal": "Web"
+}
+
+### Editar solo algunos campos
+PATCH {{base}}/inventario/2
+Content-Type: application/json
+
+{ "stock": 30 }
+
+### Eliminar un registro
+DELETE {{base}}/clientes/4
+
+### Cambiar el nombre de la empresa
+PUT {{base}}/empresa
+Content-Type: application/json
+
+{ "nombre": "Café Luna" }
+
+### Volver a los datos de ejemplo (borra todo)
+POST {{base}}/restaurar

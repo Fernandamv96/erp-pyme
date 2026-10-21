@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP Pyme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; background: #08090d; color: #e8eaf6;
+         font-family: "Manrope", system-ui, sans-serif; }
+  main { width: 100%; max-width: 760px; display: flex; flex-direction: column; gap: 28px; }
+  h1 { margin: 0; font-size: 34px; font-weight: 800; letter-spacing: -.02em; }
+  p { margin: 6px 0 0; color: #9aa0bd; }
+  .opciones { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  a { display: flex; flex-direction: column; gap: 10px; padding: 24px; border-radius: 20px; text-decoration: none; color: inherit;
+      min-height: 170px; justify-content: flex-end; transition: transform .2s, box-shadow .2s; }
+  a:hover { transform: translateY(-3px); }
+  a strong { font-size: 20px; }
+  a span { font-size: 14px; opacity: .8; }
+  .aurora { background: radial-gradient(circle at 20% 10%, #5b3fd6, transparent 60%), radial-gradient(circle at 90% 80%, #1aa6c4, transparent 55%), #12142a;
+            border: 1px solid rgba(255,255,255,.12); }
+  .aurora:hover { box-shadow: 0 10px 40px rgba(139,124,246,.35); }
+  .neon { background: #0f1115; border: 1px solid #39ff9f; font-family: "JetBrains Mono", monospace; }
+  .neon strong { color: #39ff9f; text-shadow: 0 0 12px rgba(57,255,159,.6); }
+  .neon:hover { box-shadow: 0 0 30px rgba(57,255,159,.3); }
+  small { color: #6f768f; font-size: 13px; }
+  :focus-visible { outline: 2px solid #4fd1e8; outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <div>
+    <h1>ERP Pyme</h1>
+    <p>Elige un diseño. Los dos usan los mismos datos.</p>
+  </div>
+  <div class="opciones">
+    <a class="aurora" href="/aurora"><strong>Aurora Glass</strong><span>Vidrio esmerilado y fondo aurora</span></a>
+    <a class="neon" href="/neon"><strong>Dock Neon</strong><span>Dock inferior y acentos neón</span></a>
+  </div>
+  <small>Necesitas la clave de administrador para entrar.</small>
+</main>
+</body>
+</html>

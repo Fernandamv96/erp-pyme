@@ -1,0 +1,23 @@
+{
+  "name": "erp-pyme",
+  "version": "1.0.0",
+  "description": "ERP sencillo para pymes: ventas, inventario, clientes y gastos, con dos diseños (Aurora Glass y Dock Neon).",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "dev": "node --watch --env-file-if-exists=.env src/server.js",
+    "reset": "node --env-file-if-exists=.env src/reset.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.11"
+  }
+}
