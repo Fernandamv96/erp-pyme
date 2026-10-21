@@ -4,6 +4,7 @@
   "buildCommand": "",
   "outputDirectory": "public",
   "cleanUrls": true,
+  "regions": ["gru1"],
   "rewrites": [{ "source": "/api/:path*", "destination": "/api" }],
   "headers": [
     {

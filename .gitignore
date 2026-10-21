@@ -7,3 +7,8 @@ data/
 *.db-wal
 *.db-shm
 .vercel/
+
+# Archivos que agrega la integración de Neon de Vercel
+.agents/
+.claude/
+skills-lock.json
