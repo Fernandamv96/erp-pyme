@@ -22,7 +22,9 @@ export const RUTA_DB = process.env.DATABASE_URL
 async function conectar() {
   if (process.env.DATABASE_URL) {
     const { default: pg } = await import("pg");
-    const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, max: 3 });
+    // verify-full: cifra la conexión y verifica el certificado del servidor
+    const connectionString = process.env.DATABASE_URL.replace(/sslmode=(prefer|require|verify-ca)\b/, "sslmode=verify-full");
+    const pool = new pg.Pool({ connectionString, max: 3 });
     return {
       consulta: (sql, valores) => pool.query(sql, valores),
       async transaccion(fn) {
